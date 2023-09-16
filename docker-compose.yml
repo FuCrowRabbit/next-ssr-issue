@@ -12,16 +12,3 @@ services:
       - '3000:3000'
     tty: true
     command: npm run dev
-
-  api:
-    build:
-      context: _docker/api
-      dockerfile: Dockerfile
-    volumes:
-      - type: bind
-        source: ./api
-        target: /app
-    working_dir: /app
-    ports:
-      - '3001:3001'
-    tty: true
